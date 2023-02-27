@@ -5,10 +5,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["LabOne/LabOne.csproj", "LabOne/"]
-RUN dotnet restore "LabOne/LabOne.csproj"
 COPY . .
-WORKDIR "/src/LabOne"
+RUN dotnet restore "LabOne.csproj"
 RUN dotnet build "LabOne.csproj" -c Release -o /app/build
 
 FROM build AS publish
