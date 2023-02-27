@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = Model.IsReadOnly ? "Confirm Order" : "Order";
+}
+
+@model OrderModel
+
+@*The only difference between confirming data and entering data is the user-action*@
+@*Therefore we can reuse the same view/model and adjust what gets presented*@
+
+
+<div class="text-center">
+    <h1 class="display-4">
+        @(Model.IsReadOnly ? "Confirm" : "Place Order")
+    </h1>
+    @if (Model.IsReadOnly)
+    {
+        <p>Please confirm your order information below.</p>
+    }
+    else
+    {
+        <p>Please enter your payment information below.</p>
+    }
+</div>
+
+@{ await Html.RenderPartialAsync("OrderView", Model); }
+
+@section Scripts
+{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
