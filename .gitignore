@@ -2,3 +2,7 @@
 bin
 .idea
 .vscode
+.vs
+packages
+*.zip
+*.user
