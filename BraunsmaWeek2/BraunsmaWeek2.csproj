@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="pgCheckOut.aspx" />
     <Content Include="pgConfirm.aspx" />
-    <Content Include="themes.scss" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

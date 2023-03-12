@@ -107,7 +107,7 @@ namespace BraunsmaWeek2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Master.UserFeedback = "Please enter billing information.";
         }
     }
 }

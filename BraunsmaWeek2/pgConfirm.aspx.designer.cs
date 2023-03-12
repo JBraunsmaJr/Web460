@@ -15,15 +15,6 @@ namespace BraunsmaWeek2
     {
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -69,15 +60,6 @@ namespace BraunsmaWeek2
         protected global::System.Web.UI.WebControls.Label lblCCNumber;
 
         /// <summary>
-        /// lblStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatus;
-
-        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>
@@ -85,6 +67,20 @@ namespace BraunsmaWeek2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new BraunsmaWeek2.Layout Master
+        {
+            get
+            {
+                return ((BraunsmaWeek2.Layout)(base.Master));
+            }
+        }
 
         /// <summary>
         /// PreviousPage property.
