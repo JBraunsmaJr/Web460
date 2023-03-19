@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek1", "BraunsmaWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek2", "BraunsmaWeek2\BraunsmaWeek2.csproj", "{773497A9-4C79-411C-B019-158327D11C58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{0AE66319-0B7B-45CB-A216-40DBE2A668D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek3", "BraunsmaWeek3\BraunsmaWeek3.csproj", "{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{773497A9-4C79-411C-B019-158327D11C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{773497A9-4C79-411C-B019-158327D11C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{773497A9-4C79-411C-B019-158327D11C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AE66319-0B7B-45CB-A216-40DBE2A668D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE66319-0B7B-45CB-A216-40DBE2A668D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE66319-0B7B-45CB-A216-40DBE2A668D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE66319-0B7B-45CB-A216-40DBE2A668D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

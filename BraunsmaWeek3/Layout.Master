@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="BraunsmaWeek3.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Web460 Book Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <asp:ContentPlaceHolder ID="HeadSection" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="d-flex flex-column h-100 bg-dark">
+<main class="flex-shrink-0">
+    <form id="form1" runat="server">
+        <table class="table table-dark table-hover table-striped">
+            <tr>
+                <td colspan="2">
+                    <h1>WEB 460 Book Store</h1>
+                    <h2>Providing you 100% more than 360 degrees</h2>
+                    <strong>
+                        <span style="color:red">
+                            <asp:Label ID="lblUserFeedback" runat="server">Welcome Traveler</asp:Label>
+                        </span>
+                    </strong>
+                </td>
+            </tr>
+            <tr style="vertical-align: top"> 
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</main>
+<footer class="footer mt-auto py-3 bg-dark text-white fixed-bottom">
+  <div class="container">
+      Copyright DeVry University<br/>
+      <strong>User's GUID:
+          <asp:Label ID="lblGUID" runat="server"/>
+      </strong>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
