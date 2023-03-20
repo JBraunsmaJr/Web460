@@ -38,8 +38,7 @@ MasterPageFile="~/Layout.Master" %>
     <br /><br /><br />
     <label>Existing Customers</label>
     <div style="width: 40%">
-        <asp:DropDownList ID="dropdownLastNames" runat="server" 
-            AutoPostBack="true" CssClass="form-control"></asp:DropDownList>
+        <asp:DropDownList ID="dropdownLastNames" runat="server" CssClass="form-control"></asp:DropDownList>
     </div>
     <br/>
     <label><strong>Customer ID:</strong></label>

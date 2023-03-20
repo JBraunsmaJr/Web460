@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Databa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek3", "BraunsmaWeek3\BraunsmaWeek3.csproj", "{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramaholicsAnonymous", "ProgramaholicsAnonymous\ProgramaholicsAnonymous.csproj", "{546CEBDE-25FA-420F-B924-DF28F55EC4BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{546CEBDE-25FA-420F-B924-DF28F55EC4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546CEBDE-25FA-420F-B924-DF28F55EC4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546CEBDE-25FA-420F-B924-DF28F55EC4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546CEBDE-25FA-420F-B924-DF28F55EC4BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

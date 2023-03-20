@@ -127,6 +127,11 @@ namespace BraunsmaWeek3
         {
             Master.UserFeedback = "Please enter billing information.";
 
+            HandleDropdownPostEvent();
+        }
+
+        void HandleDropdownPostEvent()
+        {
             var orders = Master.Database.GetAll<Order>();
             _cachedOrders = orders.ToDictionary(x => x.LastName, x => x);
 
@@ -142,7 +147,7 @@ namespace BraunsmaWeek3
                 var value = dropdownLastNames.Items[index].Text;
                 UpdateFields(_cachedOrders[value]);
             }
-            else 
+            else
                 ClearInputs();
         }
 
@@ -209,11 +214,23 @@ namespace BraunsmaWeek3
             CustomerId = order.Id;
         }
 
+        private string GetSearchLastName
+        {
+            get
+            {
+                // Dropdown takes priority
+                if (dropdownLastNames.SelectedIndex > 0)
+                    return dropdownLastNames.Items[dropdownLastNames.SelectedIndex].Text;
+
+                return LastName;
+            }
+        }
+
         protected void btnFindLastName_OnClick(object sender, EventArgs e)
         {
             try
             {
-                var result = Master.Database.FirstOrDefault<Order>(x => x.LastName == LastName);
+                var result = Master.Database.FirstOrDefault<Order>(x => x.LastName == GetSearchLastName);
 
                 if(result == null)
                 {
