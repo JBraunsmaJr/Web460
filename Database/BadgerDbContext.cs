@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -63,6 +65,93 @@ public class BadgerDbContext : IDisposable
         }
 
         Initialized = true;
+    }
+
+    public DataTable GetAllAsDataTable<T>()
+    {
+        if (!_tables.TryGetValue(typeof(T), out var tableInfo))
+            return null;
+        
+        var table = new DataTable();
+        table.TableName = typeof(T).Name + "s";
+
+        foreach (var col in tableInfo.Columns)
+            table.Columns.Add(new DataColumn(col.Name, col.Property.PropertyType));
+
+        var items = GetAll<T>().ToList();
+        foreach (var item in items)
+        {
+            var dr = table.NewRow();
+            dr.BeginEdit();
+            foreach (var prop in tableInfo.Columns)
+            {
+                var value = prop.Property.GetValue(item, null);
+
+                if (value != null)
+                    dr[prop.Name] = value;
+            }
+                    
+            dr.EndEdit();
+            table.Rows.Add(dr);
+        }
+
+        return table;
+    }
+
+    /// <summary>
+    /// Output Table of <typeparamref name="T"/> into XML format.
+    /// </summary>
+    /// <remarks>
+    ///     File name will be <paramref name="basePath"/> + name of <typeparamref name="T"/> + .xml
+    ///     "basePath/TName.xml"
+    /// </remarks>
+    /// <param name="basePath">Directory path on disk to save to</param>
+    /// <param name="refreshFromDb"></param>
+    /// <typeparam name="T">Table Type</typeparam>
+    /// <returns>DataSet</returns>
+    public DataSet GetAllAsXML<T>(string basePath, bool refreshFromDb=false)
+    {
+        var filePath = Path.Combine(basePath, $"{typeof(T).Name}.xml");
+        
+        // Prob could save performance by not doing this but in effort of time
+        // doesn't really matter for a lab
+        var table = GetAllAsDataTable<T>();
+
+        var dataset = new DataSet(nameof(T));
+        dataset.Tables.Add(table);
+        
+        if (File.Exists(filePath) && !refreshFromDb)
+        {
+            try
+            {
+                dataset.Clear();
+                dataset.ReadXml(filePath);
+            }
+            catch (Exception ex)
+            {
+                // pretend we have a logging mechanism somewhere
+                // log file/permission error for destination
+                throw;
+            }
+        }
+        else
+        {
+            try
+            {
+                
+                
+                dataset.WriteXml(filePath);
+                dataset.ReadXml(filePath);
+            }
+            catch (Exception ex)
+            {
+                // pretend we have a logging mechanism somewhere
+                // log error during output
+                throw;
+            }
+        }
+
+        return dataset;
     }
 
     /// <summary>

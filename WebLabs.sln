@@ -3,17 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabOne", "LabOne\LabOne.csproj", "{87CB698D-1046-4C05-86C2-9CEE7BED2614}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{4DAF6EA3-241A-46AD-9483-4C77B17C51C4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek1", "BraunsmaWeek1\BraunsmaWeek1.csproj", "{90925777-8E8A-4C07-B9A2-69792246A21D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek2", "BraunsmaWeek2\BraunsmaWeek2.csproj", "{773497A9-4C79-411C-B019-158327D11C58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{0AE66319-0B7B-45CB-A216-40DBE2A668D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek3", "BraunsmaWeek3\BraunsmaWeek3.csproj", "{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BraunsmaWeek4", "BraunsmaWeek4\BraunsmaWeek4.csproj", "{24DF914F-BBBB-47AB-BC7D-4405FA4AEEF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramaholicsAnonymous", "ProgramaholicsAnonymous\ProgramaholicsAnonymous.csproj", "{546CEBDE-25FA-420F-B924-DF28F55EC4BF}"
 EndProject
@@ -23,18 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{87CB698D-1046-4C05-86C2-9CEE7BED2614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87CB698D-1046-4C05-86C2-9CEE7BED2614}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87CB698D-1046-4C05-86C2-9CEE7BED2614}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87CB698D-1046-4C05-86C2-9CEE7BED2614}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90925777-8E8A-4C07-B9A2-69792246A21D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90925777-8E8A-4C07-B9A2-69792246A21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90925777-8E8A-4C07-B9A2-69792246A21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90925777-8E8A-4C07-B9A2-69792246A21D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{773497A9-4C79-411C-B019-158327D11C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{773497A9-4C79-411C-B019-158327D11C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{773497A9-4C79-411C-B019-158327D11C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{773497A9-4C79-411C-B019-158327D11C58}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0AE66319-0B7B-45CB-A216-40DBE2A668D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0AE66319-0B7B-45CB-A216-40DBE2A668D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE66319-0B7B-45CB-A216-40DBE2A668D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
